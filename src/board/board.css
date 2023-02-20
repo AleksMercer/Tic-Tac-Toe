@@ -1,0 +1,15 @@
+.board {
+  width: 25vw;
+  height: 25vw;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1vw;
+}
+
+@media (max-width: 1000px) {
+  .board {
+    width: 55vw;
+    height: 55vw;
+  }
+} 
