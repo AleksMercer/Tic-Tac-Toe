@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { calculateWinner } from '../components/Winner'
+import Counter from '../components/Counter'
 import Board from '../board/Board'
 import './game.css'
 
@@ -28,6 +29,13 @@ function Game() {
     )
   }
 
+  const resetScore = () => {
+
+    return (
+      <button className='resetScore'>Reset Score</button>
+    )
+  }
+
   return (
     
     <div className='game'>
@@ -35,12 +43,18 @@ function Game() {
       <div className="score">
 
         <h2 className='winAndTurn'>{ winner ? 'Winner : ' + winner : 'Next turn : ' + (xturn ? '🞪' : '⭘')}</h2>
+        
+        <div className='winnerCounter'>
+            <p>🞪</p><p> : <Counter winner={winner} player='🞪' playerNum={0} /></p>
+            <p>⭘</p><p> : <Counter winner={winner} player='⭘' playerNum={1} /></p>
+        </div>
       </div>
 
       <Board squares={board} click={handleClick} />
       
       <div className="buttons">
         { newGame() }
+        { resetScore() }
       </div>
     </div>
   )
