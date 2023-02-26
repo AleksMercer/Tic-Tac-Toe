@@ -1,0 +1,93 @@
+@mixin grid_template($template) { 
+  //@include grid_template($template);
+  display: grid;
+  grid-template: $template;
+}
+
+.game {
+  @include grid_template(1fr auto 1fr / 1fr);
+  justify-items: center;
+  align-items: center;
+
+  &__score {
+    @include grid_template(repeat(2, 1fr) / 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+
+    .winAndTurn {
+      font-size: 4rem;
+      font-weight: 300;
+    }
+    
+    .scoreCounter {
+      @include grid_template(1fr / repeat(2, 1fr));
+      column-gap: 60px;
+      font-size: 3.5rem;
+
+      .xo {
+        font-weight: 500;
+      }
+
+      .counter {
+        font-weight: 100;
+      }
+    }  
+  }
+  
+  &__board {
+    @include grid_template(repeat(3, 1fr) / repeat(3, 1fr));
+    gap: 15px;
+    
+    .square {
+      width: 15rem;
+      height: 15rem;
+
+      background-color: black;
+      border: 1px solid rgb(255, 255, 255);
+
+      text-align: center;
+      font-size: 10rem;
+      font-weight: 600; 
+
+      padding-bottom: 1.5rem;
+    }
+
+    .square:hover {
+      filter: invert(100%);
+    }
+  }
+  
+  &__buttons {
+    @include grid_template(1fr / repeat(2, 1fr));
+    column-gap: 25px;
+
+    button {
+      background-color: black;
+      box-shadow: 0 0 10px 0 white;
+    
+      font-size: 3.5rem;
+      font-weight: 100;
+
+      padding: 1rem;
+    }
+    
+    button:hover  {
+      filter: invert(100%);
+    }
+  }
+}
+
+@media (max-width: 1100px) { // before 1100px 
+
+}
+	
+@media (max-width: 750px) { // before 750px 
+
+}
+	
+@media (max-width: 500px) { // before 500px 
+
+}
+
+

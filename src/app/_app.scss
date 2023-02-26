@@ -1,0 +1,54 @@
+/* Common style --start */
+
+* {
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+html, body {
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	font-size: 10px; //for using 'rem'
+}
+
+body #root {
+	min-height: 100%;
+	display: grid;
+	grid-template: auto 1fr auto / 1fr;
+}
+
+/* Common style --end */
+
+.main-title {
+	font-size: 12rem;
+	font-weight: 100;
+	text-align: center;
+}
+
+footer {
+	font-size: 1.7rem;
+	font-weight: 100;
+	text-align: center;
+
+	.href-name {
+		font-weight: 400;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 1100px) { // before 1100px 
+
+}
+	
+@media (max-width: 750px) { // before 750px 
+
+}
+	
+@media (max-width: 500px) { // before 500px 
+
+}
+
+	

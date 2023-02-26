@@ -1,0 +1,221 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&display=swap");
+/* Style reset start */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input, button, textarea {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+/* Style reset end */
+/* Common style --start */
+* {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  font-size: 10px;
+}
+
+body #root {
+  min-height: 100%;
+  display: grid;
+  grid-template: auto 1fr auto/1fr;
+}
+
+/* Common style --end */
+.main-title {
+  font-size: 12rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+footer {
+  font-size: 1.7rem;
+  font-weight: 100;
+  text-align: center;
+}
+footer .href-name {
+  font-weight: 400;
+}
+footer p {
+  margin-bottom: 10px;
+}
+
+.game {
+  display: grid;
+  grid-template: 1fr auto 1fr/1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.game__score {
+  display: grid;
+  grid-template: repeat(2, 1fr)/1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 30px;
+}
+.game__score .winAndTurn {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.game__score .scoreCounter {
+  display: grid;
+  grid-template: 1fr/repeat(2, 1fr);
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+  font-size: 3.5rem;
+}
+.game__score .scoreCounter .xo {
+  font-weight: 500;
+}
+.game__score .scoreCounter .counter {
+  font-weight: 100;
+}
+.game__board {
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  gap: 15px;
+}
+.game__board .square {
+  width: 15rem;
+  height: 15rem;
+  background-color: black;
+  border: 1px solid rgb(255, 255, 255);
+  text-align: center;
+  font-size: 10rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+}
+.game__board .square:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+.game__buttons {
+  display: grid;
+  grid-template: 1fr/repeat(2, 1fr);
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+.game__buttons button {
+  background-color: black;
+  -webkit-box-shadow: 0 0 10px 0 white;
+          box-shadow: 0 0 10px 0 white;
+  font-size: 3.5rem;
+  font-weight: 100;
+  padding: 1rem;
+}
+.game__buttons button:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}

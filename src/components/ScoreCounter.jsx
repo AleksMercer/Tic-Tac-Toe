@@ -19,7 +19,7 @@ function Counter(props) {
   }
 
   return (
-    <span>
+    <span className='counter'>
       {JSON.parse(localStorage.getItem('playersScores'))[props.playerNum]}
     </span>
   )
