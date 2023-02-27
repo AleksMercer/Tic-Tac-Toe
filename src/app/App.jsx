@@ -6,7 +6,7 @@ import Game from '../game/Game';
 function App() {
   return (
     <>
-      <h1 className='main-title'>Tic -Tac -Toe!</h1>
+      <h1 className='main-title'>T<span>ic</span> -T<span>ac</span> -T<span>oe</span>!</h1>
 
       <Game />
       

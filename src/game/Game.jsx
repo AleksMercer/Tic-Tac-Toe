@@ -38,7 +38,7 @@ function Game() {
   }
 
   const resetScore = () => {  
-    
+  
     return (
       <button onClick={ 
         () => { 
@@ -52,13 +52,26 @@ function Game() {
     )
   }
 
+  const winAndTurn = () => {
+
+    if (winner) {
+      return 'Winner : ' + winner
+
+    } else if (!board.includes(null)) {
+      return 'Draw!'
+
+    } else {
+      return 'Next turn : ' + (xturn ? 'x' : 'o')
+    }
+  }
+  
   return (
     
     <div className='game'>
 
       <div className="game__score">
 
-        <h2 className='winAndTurn'>{ winner ? 'Winner : ' + winner : 'Next turn : ' + (xturn ? 'x' : 'o')}</h2>
+        <h2 className='winAndTurn'> { winAndTurn() } </h2>
         
         <div className='scoreCounter'>
             <p> <span className='xo'>x</span> : <Counter winner={winner} player='x' playerNum={0} /></p>
@@ -66,7 +79,7 @@ function Game() {
         </div>
       </div>
 
-      <Board squares={board} click={handleClick} /> {/* returns 'div' with 9 squares-'button' */}
+      <Board squares={board} click={ handleClick } /> {/* returns 'div' with 9 squares-'button' */}
       
       <div className="game__buttons">
         { newGame() }
