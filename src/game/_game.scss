@@ -39,7 +39,7 @@
     @include grid_template(repeat(3, 1fr) / repeat(3, 1fr));
     gap: 15px;
     
-    .square {
+    .square, .square-invert {
       width: 15rem;
       height: 15rem;
 
@@ -51,6 +51,10 @@
       font-weight: 600; 
 
       padding-bottom: 1.5rem;
+    }
+
+    .square-invert {
+      filter: invert(100%);
     }
 
     .square:hover {
@@ -89,7 +93,7 @@
     &__board {
       gap: 10px;
       
-      .square {
+      .square, .square-invert  {
         width: 12rem;
         height: 12rem;
     
@@ -100,6 +104,26 @@
     &__buttons {
       @include grid_template( repeat(2, 1fr) / 1fr );
       row-gap: 25px;
+    }
+  }
+}
+
+@media (max-width: 500px) { // before 700px 
+  .game {
+
+    &__board {
+      gap: 10px;
+      
+      .square, .square-invert  {
+        width: 10rem;
+        height: 10rem;
+    
+        font-size: 7rem;
+      }
+    }
+    
+    &__buttons {
+      row-gap: 20px;
     }
   }
 }

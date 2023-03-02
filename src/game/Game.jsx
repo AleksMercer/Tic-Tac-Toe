@@ -10,19 +10,20 @@ function Game() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [xturn, setXturn] = useState(true)
   const winner = calculateWinner(board)
+  
 
   const handleClick = (index) => {
 
     const cloneBoard = [...board]
 
-    if( cloneBoard[index] || winner ) return
+    if( cloneBoard[index] || winner[0] ) return
 
     cloneBoard[index] = xturn ? 'x' : 'o'
 
     setBoard(cloneBoard)
     setXturn(!xturn)
   }
-
+  
   const newGame = () => {
 
     return (
@@ -54,8 +55,8 @@ function Game() {
 
   const winAndTurn = () => {
 
-    if (winner) {
-      return 'Winner : ' + winner
+    if (winner[0] !== null) {
+      return 'Winner : ' + winner[0]
 
     } else if (!board.includes(null)) {
       return 'Draw!'
@@ -64,7 +65,7 @@ function Game() {
       return 'Next turn : ' + (xturn ? 'x' : 'o')
     }
   }
-  
+
   return (
     
     <div className='game'>
@@ -79,7 +80,7 @@ function Game() {
         </div>
       </div>
 
-      <Board squares={board} click={ handleClick } /> {/* returns 'div' with 9 squares-'button' */}
+      <Board squares={ board } click={ handleClick } winArray={ winner[1] }/> {/* returns 'div' with 9 squares-'button' */}
       
       <div className="game__buttons">
         { newGame() }

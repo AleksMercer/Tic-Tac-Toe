@@ -7,7 +7,7 @@ if ( JSON.parse(localStorage.getItem('playersScores')) === null ) {
 
 function Counter(props) {
 
-  if (props.winner === props.player) {
+  if (props.winner[0] === props.player) {
 
     let newScores = JSON.parse(localStorage.getItem('playersScores'))
 
