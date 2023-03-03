@@ -6,6 +6,7 @@
 
 .game {
   @include grid_template(1fr auto 1fr / 1fr);
+  row-gap: 25px;
   justify-items: center;
   align-items: center;
 
@@ -15,9 +16,23 @@
     align-items: center;
     row-gap: 30px;
 
-    .winAndTurn {
-      font-size: 4rem;
-      font-weight: 300;
+    .turnReturn {
+      @include grid_template(1fr / 1fr auto);
+      column-gap: 20px;
+
+      .winAndTurn {
+        font-size: 4rem;
+        font-weight: 300;
+      }
+
+      .return-button {
+        background-color: black;
+        border: 1px solid white;
+
+        img {
+          filter: invert(100%)  
+        }
+      }
     }
     
     .scoreCounter {
@@ -27,10 +42,6 @@
 
       .xo {
         font-weight: 500;
-      }
-
-      .counter {
-        font-weight: 100;
       }
     }  
   }
@@ -68,7 +79,7 @@
 
     button {
       background-color: black;
-      box-shadow: 0 0 10px 0 white;
+      border: 1px solid white;
     
       font-size: 3.5rem;
       font-weight: 100;
@@ -88,9 +99,27 @@
 
     &__score {
       row-gap: 20px;
+
+      .turnReturn {
+        column-gap: 15px;
+
+        .winAndTurn {
+          font-size: 3rem;
+          font-weight: 100;
+        }
+
+        .return-button {  
+          img {
+            width: 30px;
+            height: 30px;
+            filter: invert(100%)  
+          }
+        }
+      }
     }
     
     &__board {
+      margin: 2%;
       gap: 10px;
       
       .square, .square-invert  {
@@ -102,18 +131,19 @@
     }
     
     &__buttons {
-      @include grid_template( repeat(2, 1fr) / 1fr );
-      row-gap: 25px;
+      column-gap: 15px;
+
+      button {
+        font-size: 3rem;
+        padding: 0.75rem;
+      }
     }
   }
 }
 
 @media (max-width: 500px) { // before 700px 
   .game {
-
-    &__board {
-      gap: 10px;
-      
+    &__board {   
       .square, .square-invert  {
         width: 10rem;
         height: 10rem;
@@ -121,9 +151,14 @@
         font-size: 7rem;
       }
     }
-    
+
     &__buttons {
-      row-gap: 20px;
+      column-gap: 10px;
+
+      button {
+        font-size: 2.75rem;
+        padding: 0.5rem;
+      }
     }
   }
 }

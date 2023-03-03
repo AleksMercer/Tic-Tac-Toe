@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../style.css';
+import returnButton from './return.svg';
 
 import { calculateWinner } from '../components/Winner'
 import Counter from '../components/ScoreCounter'
@@ -8,6 +9,7 @@ import Board from '../components/Board'
 function Game() {
 
   const [board, setBoard] = useState(Array(9).fill(null))
+  const [prevBoard, setPrevBoard] = useState(Array(9).fill(null))
   const [xturn, setXturn] = useState(true)
   const winner = calculateWinner(board)
   
@@ -20,8 +22,25 @@ function Game() {
 
     cloneBoard[index] = xturn ? 'x' : 'o'
 
+    setPrevBoard(board)
     setBoard(cloneBoard)
     setXturn(!xturn)
+  }
+
+  const returnTurn = () => {
+    
+    return (
+      <button className='return-button' onClick={ 
+          () => {
+            if(winner[0] || prevBoard === board || !board.includes(null) || !board.includes('x' || 'o')) return;
+
+            setBoard(prevBoard); 
+            setXturn(!xturn) 
+          }
+        }>
+        <img src={returnButton} alt="<-" />
+      </button>
+    )
   }
   
   const newGame = () => {
@@ -72,8 +91,11 @@ function Game() {
 
       <div className="game__score">
 
-        <h2 className='winAndTurn'> { winAndTurn() } </h2>
-        
+        <div className="turnReturn">
+          <h2 className='winAndTurn'> { winAndTurn() } </h2>
+          { returnTurn() }
+        </div>
+
         <div className='scoreCounter'>
             <p> <span className='xo'>x</span> : <Counter winner={winner} player='x' playerNum={0} /></p>
             <p> <span className='xo'>o</span> : <Counter winner={winner} player='o' playerNum={1} /></p>
