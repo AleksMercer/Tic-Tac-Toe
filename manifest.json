@@ -1,6 +1,6 @@
 {
-  "short_name": "Spisok",
-  "name": "Spisok project",
+  "short_name": "Tic-Tac-Toe",
+  "name": "Tic-Tac-Toe-game",
   "icons": [
     {
       "src": "./icons/favicon.ico",
@@ -19,7 +19,7 @@
     }
   ],
   "start_url": ".",
-  "theme_color":"#ffffff",
-  "background_color":"#ffffff",
+  "theme_color":"#000000",
+  "background_color":"#000000",
   "display":"standalone"
 }
