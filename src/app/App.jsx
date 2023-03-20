@@ -11,8 +11,7 @@ function App() {
       <Game />
       
       <footer>
-        <p>• Part of the logic is taken from the <a className='href-name' href="https://reactjs.org/tutorial/tutorial.html"> official site of React </a>, but now without classes and using functional components with hooks •</p>
-        <p>•<span> Site designed by</span><a className='href-name' href="https://github.com/AleksMercer"> Mercer </a>© 2023 •</p>
+        <p>•<span> Site designed by</span> <a className='href-name' href="https://github.com/AleksMercer">Mercer</a> © 2023 •</p>
       </footer>
     </>
   )
