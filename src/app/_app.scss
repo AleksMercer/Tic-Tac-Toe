@@ -1,51 +1,58 @@
-/* Common style --start */
-
 * {
 	font-family: 'Roboto', sans-serif;
-	color: white;
+	color: rgb(255, 255, 255);
 }
 
-html, body {
+html, body, #root {
 	height: 100%;
-	background-color: rgb(0, 0, 0);
+	width: 100%;
 	font-size: 10px; //for using 'rem'
 }
 
-body #root {
-	min-height: 100%;
-	display: grid;
-	grid-template: auto 1fr auto / 1fr;
+body {
+	background: url('./app/tic-tac-toe-theme.webp');
+	background-color: rgb(0, 0, 0);
+	background-size: 20%;
 }
 
-/* Common style --end */
+#root {
+	@include grid_template(auto 1fr auto / 1fr);
+	row-gap: 2%;
+	backdrop-filter: blur(13px);
 
-.main-title {
-	font-size: 12rem;
-	font-weight: 100;
-	text-align: center;
-	margin-bottom: 25px;
-}
-
-footer {
-	font-size: 1.7rem;
-	font-weight: 100;
-	text-align: center;
-
-	margin: 25px 15px 0px 15px;
-
-	.href-name {
-		font-weight: 400;
+	.main-title {
+		justify-self: center;
+	
+		font-size: 10rem;
+		font-weight: 100;
 	}
-
-	p {
-		margin-bottom: 10px;
+	
+	footer {
+		justify-self: center;
+	
+		margin-bottom: 0.5%;
+	
+		font-size: 1.7rem;
+		font-weight: 100;
+	
+		.href-name {
+			font-weight: 400;
+		}
 	}
 }
 	
 @media (max-width: 700px) { // before 700px 
+	html {
+		background-size: 40%;
+	}
+	
+	#root {
+		backdrop-filter: blur(10px);
+	}
+
 	.main-title {
 		white-space: nowrap;
-		font-size: 9rem;
+		font-size: 8rem;
 
 		span {
 			font-size: 5rem;
@@ -53,12 +60,30 @@ footer {
 	}
 }
 
-@media (max-width: 500px) { // before 700px 
+@media (max-width: 500px) { // before 500px 
+
+	html {
+		background-size: 60%;
+	}
+	
+	body #root {
+		backdrop-filter: blur(8px);
+	}
+
 	.main-title {
-		font-size: 7rem;
+		font-size: 5rem;
 
 		span {
-			font-size: 4rem;
+			font-size: 3rem;
+		}
+	}
+}
+
+@media (max-width: 400px) { // before 500px 
+	.main-title {
+
+		span {
+			display: none;
 		}
 	}
 }
