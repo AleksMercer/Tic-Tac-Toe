@@ -14,4 +14,4 @@ New features have also been added.</br>
 - winner counter + local storage.</br>
 - highlighting the winner.</br>
 - 'reset' & 'new game' button.</br>
-- In Mobile google chrome you can install it as an app.</br>
+- In google chrome you can install it as an app.</br>
