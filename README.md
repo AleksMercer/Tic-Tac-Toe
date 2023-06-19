@@ -1,17 +1,24 @@
-<h1>Tic-Tac-Toe</h1>
-
-<h3>Description</h3>
-
-Game-project "Tic-Tac-Toe", my first React App.</br>
-Part of the logic is taken from the [official site of React](https://ru.reactjs.org/tutorial/tutorial.html).</br>
-But now without classes and using functional components with hooks.</br>
-New features have also been added.</br>
-
-<h3>Game function</h3>
-
-- classic Tic-Tac-Toe game.</br>
-- go back one turn.</br>
-- winner counter + local storage.</br>
-- highlighting the winner.</br>
-- 'reset' & 'new game' button.</br>
-- In google chrome you can install it as an app.</br>
+#  «Tic-Tac-Toe»
+## 📚 Description
+  **"Tic-Tac-Toe"** - This is a classic game of brought to life in a digital format. Test your strategic skills and compete against a friend on the same device in this addictive game. The simple rules make it easy to learn,   yet the gameplay offers endless possibilities for tactical moves and clever strategies. Whether you're looking for a quick match or a leisurely challenge, Tic-Tac-Toe is the perfect choice to keep you entertained and        engaged."
+## 📑 Feauters
+*	The classic features of this game.
+*	Highlighting the winner.
+*	One move back.
+*	Winner counter.
+*	Can be offline app.
+*	Has "reset score" and "new game" buttons.
+* Can install as an app to android / windows devices from google chrome.
+# 🔧 Technical part
+## 📖 More about the project
+  *	**Project Status**: Completed.
+  *	**Adaptivity to different screens**: yes.
+  *	**Tasted & work on**:
+    *	Google Chrome (blink)
+    * FireFox (quantum)
+    * Safari (webkit)
+    * as an android app
+    * as an windows app
+## 🔍 Technical info
+  *	Part of the logic is taken from the official site of React, but now without classes and using functional components with hooks. 
+  *	Interaction with Local-Storage to save the results.
