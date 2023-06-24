@@ -6,7 +6,6 @@
 *	Highlighting the winner
 *	One move back
 *	Winner counter
-*	Can be offline app
 *	Has "reset score" and "new game" buttons
 * Can install as an app to android / windows devices from google chrome
 # 🔧 Technical part
