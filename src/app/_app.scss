@@ -25,6 +25,10 @@ body {
 	
 		font-size: 10rem;
 		font-weight: 100;
+		
+		span {
+			font-size: 8rem;
+		}
 	}
 	
 	footer {
@@ -48,16 +52,18 @@ body {
 	
 	#root {
 		backdrop-filter: blur(10px);
-	}
 
-	.main-title {
-		white-space: nowrap;
-		font-size: 8rem;
-
-		span {
-			font-size: 5rem;
+		.main-title {
+			white-space: nowrap;
+			font-size: 20vw;
+	
+			span {
+				font-size: 10vw;
+			}
 		}
 	}
+
+
 }
 
 @media (max-width: 500px) { // before 500px 
@@ -66,26 +72,10 @@ body {
 		background-size: 60%;
 	}
 	
-	body #root {
+	#root {
 		backdrop-filter: blur(8px);
 	}
-
-	.main-title {
-		font-size: 5rem;
-
-		span {
-			font-size: 3rem;
-		}
-	}
 }
 
-@media (max-width: 400px) { // before 500px 
-	.main-title {
-
-		span {
-			display: none;
-		}
-	}
-}
 
 	

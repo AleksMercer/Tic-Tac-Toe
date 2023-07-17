@@ -11,7 +11,7 @@ function App() {
       <Game />
       
       <footer>
-        <p>•<span> Site designed by</span> <a className='href-name' href="https://github.com/AleksMercer">Mercer</a> © 2023 •</p>
+        <p>•<span> App designed by</span> <a className='href-name' href="https://github.com/AleksMercer">Mercer</a> © 2023 •</p>
       </footer>
     </>
   )

@@ -46,6 +46,9 @@ body {
   font-size: 10rem;
   font-weight: 100;
 }
+#root .main-title span {
+  font-size: 8rem;
+}
 #root footer {
   justify-self: center;
   margin-bottom: 0.5%;
@@ -64,32 +67,21 @@ body {
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
   }
-  .main-title {
+  #root .main-title {
     white-space: nowrap;
-    font-size: 8rem;
+    font-size: 20vw;
   }
-  .main-title span {
-    font-size: 5rem;
+  #root .main-title span {
+    font-size: 10vw;
   }
 }
 @media (max-width: 500px) {
   html {
     background-size: 60%;
   }
-  body #root {
+  #root {
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
-  }
-  .main-title {
-    font-size: 5rem;
-  }
-  .main-title span {
-    font-size: 3rem;
-  }
-}
-@media (max-width: 400px) {
-  .main-title span {
-    display: none;
   }
 }
 .game {
